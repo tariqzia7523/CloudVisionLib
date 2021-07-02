@@ -134,13 +134,13 @@ class ApplyOCR(var context: Context, var CLOUD_VISION_API_KEY: String, var uri: 
                 // Base64 encode the JPEG
                 base64EncodedImage.encodeContent(imageBytes)
                 annotateImageRequest.image = base64EncodedImage
-                val list: MutableList<String> = ArrayList()
-                list.add("am")
-                list.add("en")
-                list.add("zh")
-                val imageContext = ImageContext()
-                imageContext.languageHints = list
-                annotateImageRequest.imageContext = imageContext
+//                val list: MutableList<String> = ArrayList()
+//                list.add("am")
+//                list.add("en")
+//                list.add("zh")
+//                val imageContext = ImageContext()
+//                imageContext.languageHints = list
+//                annotateImageRequest.imageContext = imageContext
                 // add the features we want
                 annotateImageRequest.features = object : ArrayList<Feature?>() {
                     init {
